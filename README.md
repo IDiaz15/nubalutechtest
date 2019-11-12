@@ -12,7 +12,7 @@ The repository contains the following files:
 
 * _**DataEngineerTest.ipynb**_ - Contains the code for the Python script to be executed in Jupyter
 * _**DataEngineerTest.py**_ - Contains the code for the Python script to be executed using the Python compiler
-* _**exportedJSON.gzip**_ - Contains the exported structured JSON in a .gzip file because is higher than 25MB (limit in GitHub)
+* _**exportedJSON.gz**_ - Contains the exported structured JSON in a .gzip file because is higher than 25MB (limit in GitHub)
 * _**README.md**_ - Markdown file that contains the documentation of the project
 
 ### Summary
