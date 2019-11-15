@@ -10,15 +10,15 @@ Small project that contains the necessary files to meet the following requiremen
 
 The repository contains the following files:
 
-* _**DataEngineerTest.ipynb**_ - Contains the code for the Python script to be executed in Jupyter
-* _**DataEngineerTest.py**_ - Contains the code for the Python script to be executed using the Python compiler
+* _**NubaluDataEngineerTest.ipynb**_ - Contains the code for the Python script to be executed in Jupyter
+* _**NubaluDataEngineerTest.py**_ - Contains the code for the Python script to be executed using the Python compiler
 * _**exportedJSON.gz**_ - Contains the exported structured JSON in a .gzip file because is higher than 25MB (limit in GitHub)
 * _**README.md**_ - Markdown file that contains the documentation of the project
 
 ### Summary
 
-The script uses Pandas module to get the CSV file which contains all the required information from INE data source.
+The script uses _csv_ and _requests_ modules to get the CSV file which contains all the required information from INE data source.
 
-As there are 43 subgroups, the CSV file is splitted in parts of 44 rows, first row is the Province and the other 43 rows the values for that province. So, a JSON object is built, each _**key**_ is the name of the Province and each _**value**_ is another JSON object with all the values for subgroups and in every period.
+The csv is splitted to store the values of (provinces, subgroups, type of data, periods and values). Once, all the values are extracted, they are used to create a new JSON Object with the structure required. This will allow the user to execute queries as in the INE portal. To perform a query is required to use the correct _**keys**_ for each column, this will display an output with the final _**value**_ that contains the CSV file for that filter.
 
 Finally, the JSON object is exported into a JSON file in the same directory where the script is executed.
